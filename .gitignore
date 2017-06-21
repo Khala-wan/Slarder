@@ -1,3 +1,50 @@
+st login: Wed Jun 21 09:59:10 on console
+-[wansheng ≡ wanshengdeMacBook-Pro  ≡ ~ ]                                 16:47
+-[ ♕  ➙  cd Desktop/Slarder
+-[wansheng ≡ wanshengdeMacBook-Pro  ≡ ~/Desktop/Slarder ]                 16:47
+-[ ♕  ➙  carthage build --no-skip-current
+*** Please update to the latest Carthage version: 0.23.0. You currently are on 0.22.0
+*** xcodebuild output can be found in /var/folders/y8/r_wyh41s3d776fjdzbtrdpz00000gn/T/carthage-xcodebuild.4fo72V.log
+*** Building scheme "Slarder" in Slarder.xcodeproj
+-[wansheng ≡ wanshengdeMacBook-Pro  ≡ ~/Desktop/Slarder ]                 16:47
+-[ ♕  ➙  git init
+Initialized empty Git repository in /Users/wansheng/Desktop/Slarder/.git/
+-[wansheng ≡ wanshengdeMacBook-Pro  ≡ ~/Desktop/Slarder on master ✗ ]     16:49
+-[ ♕  ➙  git remote add origin git@github.com:Khala-wan/Slarder.git
+-[wansheng ≡ wanshengdeMacBook-Pro  ≡ ~/Desktop/Slarder on master ✗ ]     16:49
+-[ ♕  ➙  git pull
+remote: Counting objects: 5, done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (5/5), done.
+From github.com:Khala-wan/Slarder
+ * [new branch]      master     -> origin/master
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+-[wansheng ≡ wanshengdeMacBook-Pro  ≡ ~/Desktop/Slarder on master ✗ ]   × 16:49
+-[ ♕  ➙  ll
+total 0
+drwxr-xr-x  3 wansheng  staff   102B  6 21 16:47 Carthage
+drwxr-xr-x  4 wansheng  staff   136B  6 21 16:47 Slarder
+drwxr-xr-x  6 wansheng  staff   204B  6 21 16:47 Slarder.xcodeproj
+drwxr-xr-x  4 wansheng  staff   136B  6 21 16:47 SlarderTests
+-[wansheng ≡ wanshengdeMacBook-Pro  ≡ ~/Desktop/Slarder on master ✗ ]     16:50
+-[ ♕  ➙  ls
+Carthage          Slarder           Slarder.xcodeproj SlarderTests
+-[wansheng ≡ wanshengdeMacBook-Pro  ≡ ~/Desktop/Slarder on master ✗ ]     16:50
+-[ ♕  ➙  git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+
+
 # Xcode
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
@@ -21,47 +68,3 @@ xcuserdata/
 *.moved-aside
 *.xccheckout
 *.xcscmblueprint
-
-## Obj-C/Swift specific
-*.hmap
-*.ipa
-*.dSYM.zip
-*.dSYM
-
-## Playgrounds
-timeline.xctimeline
-playground.xcworkspace
-
-# Swift Package Manager
-#
-# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
-# Packages/
-# Package.pins
-.build/
-
-# CocoaPods
-#
-# We recommend against adding the Pods directory to your .gitignore. However
-# you should judge for yourself, the pros and cons are mentioned at:
-# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
-#
-# Pods/
-
-# Carthage
-#
-# Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
-
-Carthage/Build
-
-# fastlane
-#
-# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
-# screenshots whenever they are needed.
-# For more information about the recommended setup visit:
-# https://docs.fastlane.tools/best-practices/source-control/#source-control
-
-fastlane/report.xml
-fastlane/Preview.html
-fastlane/screenshots
-fastlane/test_output
