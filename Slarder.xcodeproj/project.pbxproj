@@ -29,6 +29,11 @@
 		206955861EFA6A080010A79E /* SlarderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlarderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2069558B1EFA6A080010A79E /* SlarderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlarderTests.swift; sourceTree = "<group>"; };
 		2069558D1EFA6A080010A79E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		206955A21EFA6C9B0010A79E /* Slarder+Process.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Slarder+Process.swift"; sourceTree = "<group>"; };
+		206955A31EFA6C9B0010A79E /* Slarder+Script.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Slarder+Script.swift"; sourceTree = "<group>"; };
+		206955A41EFA6C9B0010A79E /* Slarder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slarder.swift; sourceTree = "<group>"; };
+		206955A51EFA6C9B0010A79E /* SlarderAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlarderAuthorization.swift; sourceTree = "<group>"; };
+		206955A61EFA6C9B0010A79E /* SlarderError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlarderError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				206955801EFA6A080010A79E /* Slarder.h */,
+				206955A11EFA6C9B0010A79E /* Source */,
 				206955811EFA6A080010A79E /* Info.plist */,
 			);
 			path = Slarder;
@@ -84,6 +90,18 @@
 				2069558D1EFA6A080010A79E /* Info.plist */,
 			);
 			path = SlarderTests;
+			sourceTree = "<group>";
+		};
+		206955A11EFA6C9B0010A79E /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				206955A21EFA6C9B0010A79E /* Slarder+Process.swift */,
+				206955A31EFA6C9B0010A79E /* Slarder+Script.swift */,
+				206955A41EFA6C9B0010A79E /* Slarder.swift */,
+				206955A51EFA6C9B0010A79E /* SlarderAuthorization.swift */,
+				206955A61EFA6C9B0010A79E /* SlarderError.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +166,7 @@
 				TargetAttributes = {
 					2069557C1EFA6A080010A79E = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 					};
 					206955851EFA6A080010A79E = {
 						CreatedOnToolsVersion = 9.0;
@@ -327,6 +346,7 @@
 		206955921EFA6A080010A79E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -341,6 +361,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wansheng-ios.Slarder";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -348,6 +369,7 @@
 		206955931EFA6A080010A79E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
