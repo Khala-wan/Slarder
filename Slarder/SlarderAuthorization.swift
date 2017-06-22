@@ -9,7 +9,6 @@
 import Cocoa
 
 enum SlarderAuthorError:Error {
-    case isRunning(description:String)
     case OSError(description:String)
 }
 
@@ -18,11 +17,7 @@ extension Process{
     // ported from: https://github.com/sveinbjornt/STPrivilegedTask
     // see : https://github.com/gui-dos/Guigna/blob/9fdd75ca0337c8081e2a2727960389c7dbf8d694/Legacy/Guigna-Swift/Guigna/GAgent.swift#L42-L80
     // 移植自OC： https://github.com/sveinbjornt/STPrivilegedTask
-    func authorLanuch()throws->FileHandle{
-        
-        if isRunning {
-            throw SlarderAuthorError.isRunning(description: "isRunning")
-        }
+    func authorLanuch()throws->(FileHandle,pid_t){
         
         var err:OSStatus = noErr
         var toolPath = launchPath!.cString(using: .utf8)
@@ -62,9 +57,7 @@ extension Process{
         AuthorizationFree(authorizationRef!, [])
         let outputFileHandle = FileHandle(fileDescriptor: fileno(outputFilePointer), closeOnDealloc: true)
         let processIdentifier: pid_t = fcntl(fileno(outputFilePointer), F_GETOWN, 0)
-        var terminationStatus: Int32 = 0
-        waitpid(processIdentifier, &terminationStatus, 0)
-        return outputFileHandle
+        return (outputFileHandle,processIdentifier)
     }
 }
 

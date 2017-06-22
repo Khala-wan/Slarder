@@ -46,9 +46,24 @@ extension Slarder where Base:Process {
         }
     }
     
-//    func authorizationLaunch()->SlarderAuthorStatus{
-//        guard !base.isRunning else { return SlarderAuthorStatus.isRunning}
-//
-//
-//    }
+    func handleTermination(sudo:Bool,async:Bool,pid:pid_t?,terminateHandler:@escaping (Int32)->()) {
+        if sudo{
+            var terminationStatus: Int32 = 0
+            Timer.scheduledTimer(withTimeInterval: TimeInterval.init(0.05), repeats: true, block: { (timer) in
+                if waitpid(pid!, &terminationStatus, WNOHANG) != 0{
+                    let status = (terminationStatus >> 8) & 0x000000ff
+                    timer.invalidate()
+                    terminateHandler(status)
+                }
+            })
+        }else{
+            if async {
+                NotificationCenter.default.addObserver(forName: Process.didTerminateNotification, object: base, queue: nil) { (noti) in
+                    terminateHandler(self.base.terminationStatus)
+                }
+            }else{
+                terminateHandler(base.terminationStatus)
+            }
+        }
+    }
 }

@@ -27,9 +27,12 @@ extension Slarder where Base:Process {
         let errorputPipe = errorputHandler == nil ? nil : Pipe()
         
         var readHandlers:(FileHandle?,FileHandle?) = self.setInOutputAndErrorOutput(input: nil, output: outputPipe, errorOutput: errorputPipe)
+        var pid:pid_t?
         if sudo {
             do{
-                readHandlers.0 = try self.base.authorLanuch()
+                let result = try self.base.authorLanuch()
+                readHandlers.0 = result.0
+                pid = result.1
             }catch{
                 print(error.localizedDescription)
                 return
@@ -37,7 +40,6 @@ extension Slarder where Base:Process {
         }else{
             base.launch()
         }
-        
         /// 标准输出
         let outResult = handleOutPutString(readHandler: readHandlers.0)
         if outResult.0 {
@@ -52,7 +54,7 @@ extension Slarder where Base:Process {
         
         /// 执行结束回调
         if let handler = terminateHandler{
-            handler(base.terminationStatus)
+            self.handleTermination(sudo: sudo,async: true,pid: pid, terminateHandler: handler)
         }
     }
     
@@ -77,9 +79,12 @@ extension Slarder where Base:Process {
         
         var readHandlers:(FileHandle?,FileHandle?) = self.setInOutputAndErrorOutput(input: inputPipe, output: outputPipe, errorOutput: errorputPipe)
         
+        var pid:pid_t?
         if sudo {
             do{
-                readHandlers.0 = try self.base.authorLanuch()
+                let result = try self.base.authorLanuch()
+                readHandlers.0 = result.0
+                pid = result.1
             }catch{
                 print(error.localizedDescription)
                 return
@@ -114,24 +119,18 @@ extension Slarder where Base:Process {
         
         /// 执行结束回调
         if let handler = terminateHandler{
-            NotificationCenter.default.addObserver(forName: Process.didTerminateNotification, object: base, queue: nil) { (noti) in
-                handler(self.base.terminationStatus)
-            }
+            self.handleTermination(sudo: sudo, async: true, pid: pid, terminateHandler: handler)
         }
     }
     
 }
 
-open class haha : NSObject {
-    
-}
-
 public struct Slarder<Base> {
-    
     public let base: Base
     public init(_ base: Base) {
         self.base = base
     }
+    var isRootRunning:Bool = false
 }
 
 public extension Process {
