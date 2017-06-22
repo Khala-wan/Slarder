@@ -1,5 +1,4 @@
-Slarder
-=======
+<div><img width="629" height="98" src="https://github.com/Khala-wan/Slarder/raw/master/resources/logo.png"/></div>
 
 ![platforms](https://img.shields.io/badge/platforms-MacOS-333333.svg) ![Xcode 9.0-beta](https://img.shields.io/badge/Xcode-9.0%2B-blue.svg) ![MacOS 10.5](https://img.shields.io/badge/MacOS-10.5%2B-blue.svg) ![Swift 4.0](https://img.shields.io/badge/Swift-4.0%2B-orange.svg) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Khala-wan/Slarder) [![中文 README](https://img.shields.io/badge/%E4%B8%AD%E6%96%87-README-blue.svg?style=flat)](https://github.com/Khala-wan/Slarder/raw/master/README-.md)
 
