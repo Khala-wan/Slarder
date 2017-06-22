@@ -61,7 +61,7 @@ let process:Process = try! Process.initWith(scriptName: "commonShell.sh", bundle
 每一个Process实例都拥有一个属性：`sd`通过`sd`我们可以使用Slarder的所有功能。
 
 ```swift
-	Process().sd.someFunc()
+Process().sd.someFunc()
 ```
 
 ### 运行Process
