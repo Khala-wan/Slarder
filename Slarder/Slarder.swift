@@ -122,6 +122,10 @@ extension Slarder where Base:Process {
     
 }
 
+open class haha : NSObject {
+    
+}
+
 public struct Slarder<Base> {
     
     public let base: Base

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2058C15F1EFB4F9900D410B8 /* Slarder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203F8E821EFA8FDC00D7FD5B /* Slarder.swift */; };
+		2058C1601EFB4F9900D410B8 /* Slarder+Process.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203F8E841EFA8FDC00D7FD5B /* Slarder+Process.swift */; };
+		2058C1611EFB4F9900D410B8 /* Slarder+Script.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203F8E831EFA8FDC00D7FD5B /* Slarder+Script.swift */; };
+		2058C1621EFB4F9900D410B8 /* SlarderAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203F8E861EFA8FDC00D7FD5B /* SlarderAuthorization.swift */; };
+		2058C1631EFB4F9900D410B8 /* SlarderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203F8E851EFA8FDC00D7FD5B /* SlarderError.swift */; };
 		206955871EFA6A080010A79E /* Slarder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2069557D1EFA6A080010A79E /* Slarder.framework */; };
 		2069558C1EFA6A080010A79E /* SlarderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2069558B1EFA6A080010A79E /* SlarderTests.swift */; };
 		2069558E1EFA6A080010A79E /* Slarder.h in Headers */ = {isa = PBXBuildFile; fileRef = 206955801EFA6A080010A79E /* Slarder.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -23,11 +28,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		203F8E7B1EFA8E9100D7FD5B /* Slarder+Process.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Slarder+Process.swift"; sourceTree = "<group>"; };
-		203F8E7C1EFA8E9100D7FD5B /* Slarder+Script.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Slarder+Script.swift"; sourceTree = "<group>"; };
-		203F8E7D1EFA8E9100D7FD5B /* Slarder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slarder.swift; sourceTree = "<group>"; };
-		203F8E7E1EFA8E9100D7FD5B /* SlarderAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlarderAuthorization.swift; sourceTree = "<group>"; };
-		203F8E7F1EFA8E9100D7FD5B /* SlarderError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlarderError.swift; sourceTree = "<group>"; };
+		203F8E821EFA8FDC00D7FD5B /* Slarder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slarder.swift; sourceTree = "<group>"; };
+		203F8E831EFA8FDC00D7FD5B /* Slarder+Script.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Slarder+Script.swift"; sourceTree = "<group>"; };
+		203F8E841EFA8FDC00D7FD5B /* Slarder+Process.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Slarder+Process.swift"; sourceTree = "<group>"; };
+		203F8E851EFA8FDC00D7FD5B /* SlarderError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlarderError.swift; sourceTree = "<group>"; };
+		203F8E861EFA8FDC00D7FD5B /* SlarderAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlarderAuthorization.swift; sourceTree = "<group>"; };
 		2069557D1EFA6A080010A79E /* Slarder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Slarder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		206955801EFA6A080010A79E /* Slarder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Slarder.h; sourceTree = "<group>"; };
 		206955811EFA6A080010A79E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,18 +60,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		203F8E7A1EFA8E9100D7FD5B /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				203F8E7B1EFA8E9100D7FD5B /* Slarder+Process.swift */,
-				203F8E7C1EFA8E9100D7FD5B /* Slarder+Script.swift */,
-				203F8E7D1EFA8E9100D7FD5B /* Slarder.swift */,
-				203F8E7E1EFA8E9100D7FD5B /* SlarderAuthorization.swift */,
-				203F8E7F1EFA8E9100D7FD5B /* SlarderError.swift */,
-			);
-			path = Source;
-			sourceTree = "<group>";
-		};
 		206955731EFA6A080010A79E = {
 			isa = PBXGroup;
 			children = (
@@ -89,7 +82,11 @@
 			isa = PBXGroup;
 			children = (
 				206955801EFA6A080010A79E /* Slarder.h */,
-				203F8E7A1EFA8E9100D7FD5B /* Source */,
+				203F8E821EFA8FDC00D7FD5B /* Slarder.swift */,
+				203F8E841EFA8FDC00D7FD5B /* Slarder+Process.swift */,
+				203F8E831EFA8FDC00D7FD5B /* Slarder+Script.swift */,
+				203F8E861EFA8FDC00D7FD5B /* SlarderAuthorization.swift */,
+				203F8E851EFA8FDC00D7FD5B /* SlarderError.swift */,
 				206955811EFA6A080010A79E /* Info.plist */,
 			);
 			path = Slarder;
@@ -213,6 +210,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2058C15F1EFB4F9900D410B8 /* Slarder.swift in Sources */,
+				2058C1601EFB4F9900D410B8 /* Slarder+Process.swift in Sources */,
+				2058C1611EFB4F9900D410B8 /* Slarder+Script.swift in Sources */,
+				2058C1621EFB4F9900D410B8 /* SlarderAuthorization.swift in Sources */,
+				2058C1631EFB4F9900D410B8 /* SlarderError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +393,7 @@
 		206955951EFA6A080010A79E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = TZCSEQPMBH;
 				INFOPLIST_FILE = SlarderTests/Info.plist;
@@ -404,6 +407,7 @@
 		206955961EFA6A080010A79E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = TZCSEQPMBH;
 				INFOPLIST_FILE = SlarderTests/Info.plist;
