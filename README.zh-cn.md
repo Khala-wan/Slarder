@@ -77,7 +77,7 @@ process.sd.launchWith(sudo: false，outputHandler: { (string, input) in
             //Process完成后会到这里
         }
 ```
-**如过errorputHandler参数传入nil，则STDERR会和STDOUT一起输出**
+**如果errorputHandler参数传入nil，则STDERR会和STDOUT一起输出**
 
 #### 异步脚本 launchAsyncWith
 如果你的脚本有需要延迟或者请求网络之类的任务时，可能一次无法全部获取所有输出，那么就需要监听STDOUT。将每一条输出串联起来。
