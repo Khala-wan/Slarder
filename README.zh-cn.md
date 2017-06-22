@@ -8,8 +8,10 @@ Slarder
 ## 演示
 ### 普通脚本：
 <div align="center"><img style="border: 1px solid #dcdcdc" width="500" height="370" src="https://github.com/Khala-wan/Slarder/raw/master/resources/gif1.gif"/></div>
+
 ### 带有异步任务的脚本：
 <div align="center"><img style="border: 1px solid #dcdcdc" width="500" height="370" src="https://github.com/Khala-wan/Slarder/raw/master/resources/gif2.gif"/></div>
+
 ## 安装
 Slarder将为你提供Cathage和CocoaPods两种选择来安装它到你的项目中。当然，你也可以直接下载源代码并拖拽源文件到你的项目中。你开心就好~
 ### Carthage
