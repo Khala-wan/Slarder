@@ -28,7 +28,7 @@ Of course, you can also download the source code and drag the source file to you
 >${ Project }/Carthage/Build/Mac/Slarder.frameWork
 
 5.Embedde in your project：
->Target -> General -> Embedded Binaries -> Add Other -> 选中刚才你拖拽过来的Slarder.frameWork
+>Target -> General -> Embedded Binaries -> Add Other -> Select "Slarder.frameWork"
 
 6.Where you want to use Slarder
 >Import Slarder
