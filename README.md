@@ -106,6 +106,10 @@ process.sd.launchAsyncWith(sudo: self.root, outputHandler: { (newStr, input) in
         }
 ```
 
+## About Swift4.0
+Slarder is support `Swift4.0`, but the SlarderSimpleExample is not support `Swift4.0`. 
+If you want use SlarderSimpleExample in `Swift4.0`.there is a branch named [Swift4.0](https://github.com/Khala-wan/Slarder/tree/Swift4.0)
+
 ## NextStep
 
 * Test Slarder

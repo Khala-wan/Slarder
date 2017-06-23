@@ -40,13 +40,13 @@ class ViewController: NSViewController {
     }
     
     @IBAction func rootCheckBoxChanged(_ sender: NSButton) {
-        root = sender.state == .on
+        root = sender.state == 1
     }
     
     
     fileprivate final func updateConsoleView(newMessage:String){
         consoleView.textStorage?.append(NSMutableAttributedString.init(string: newMessage))
-        consoleView.scrollRangeToVisible(NSMakeRange(consoleView.string.characters.count, 0))
+        consoleView.scrollRangeToVisible(NSMakeRange((consoleView.string?.characters.count)!, 0))
     }
     
     

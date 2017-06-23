@@ -102,6 +102,9 @@ process.sd.launchAsyncWith(sudo: self.root, outputHandler: { (newStr, input) in
         }
 ```
 
+## 关于 Swift4.0
+Slarder是用`Swift4.0`编写的。同样兼容`Swift3.1+`,但是SlarderSimpleExample还不支持`Swift4.0`, 所以如果你想在Swift4.0环境下试用SlarderSimpleExample。这里有一个分支：[Swift4.0](https://github.com/Khala-wan/Slarder/tree/Swift4.0)
+
 ## NextStep
 
 * 测试 Slarder
